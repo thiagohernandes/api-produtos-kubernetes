@@ -17,7 +17,7 @@ kubectl get services
 
 - install: https://skaffold.dev/
 
-### Build API-PRODUTOS
+### [Step 3] Build API-PRODUTOS
 ```
 git clone https://github.com/thiagohernandes/api-produtos-kubernetes.git
 cd api-produtos-kubernetes
@@ -25,7 +25,7 @@ mvn clean package
 skaffold run
 ```
 
-### Open API-PRODUTOS
+### [Step 4] Open API-PRODUTOS
 ```
 minikube service api-produtos
 ```
