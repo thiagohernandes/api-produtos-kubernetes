@@ -1,0 +1,33 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: api-produtos
+spec:
+  selector:
+    app: api-produtos
+  ports:
+    - protocol: TCP
+      port: 7070
+      nodePort: 30000
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-produtos
+spec:
+  selector:
+    matchLabels:
+      app: api-produtos
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: api-produtos
+    spec:
+      containers:
+        - name: api-produtos
+          image: api-produtos
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 7070
