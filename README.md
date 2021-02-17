@@ -13,7 +13,7 @@ kubectl get pod -w
 kubectl get services
 ```
 
-### [Step 12 Instructions Before (skaffold)
+### [Step 2] Instructions Before (skaffold)
 
 - install: https://skaffold.dev/
 
